@@ -22,9 +22,17 @@ body {
   .container hr {
     width: 100%;
   }
+<<<<<<< Updated upstream:module-2/CSS/style-login.css
+=======
+
+  .steps-container hr {
+    border-top: 7px solid #fff
+  }
+>>>>>>> Stashed changes:CSS/style-login.css
   
 .heading {
-    padding: 20px;
+    padding-bottom: 20px;
+    padding-top: 0;
     font-weight: 900;
     text-align: center;
     font-size: 2em;
@@ -65,13 +73,6 @@ a:active{
     color:none;
 }
 
-.heading {
-    padding: 20px;
-    font-weight: 900;
-    text-align: center;
-    font-size: 2em;
-  }
-
 .back{
     margin-bottom: 15px;
 }
@@ -91,10 +92,12 @@ a:active{
     justify-content: center;
 }
 
-.username {
+.input-slide .username {
     display: flex;
     flex: row;
     justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
     
 }
 
@@ -118,6 +121,37 @@ a:active{
     width: 0%;
 }
 
+<<<<<<< Updated upstream:module-2/CSS/style-login.css
+=======
+.steps {
+  display: inline-block;
+  position: absolute;
+  top: -25px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.item-icon > .steps {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  color: #212529;
+  font-size: 1.4em;
+  display: flex;
+  border: 5px solid #373b69;
+  margin: auto;
+  position: relative;
+  box-sizing: content-box;
+  z-index: 1;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+>>>>>>> Stashed changes:CSS/style-login.css
 .input-slide input::placeholder {
     color: white;
     font-size: 1.01em;
@@ -145,6 +179,11 @@ a:active{
 
   .steps-container {
     display: flex;
+<<<<<<< Updated upstream:module-2/CSS/style-login.css
+=======
+    position: relative;
+    padding-bottom: 10px;
+>>>>>>> Stashed changes:CSS/style-login.css
   }
 
   .item-icon {
@@ -155,3 +194,33 @@ a:active{
     width: 100%;
   }
 
+<<<<<<< Updated upstream:module-2/CSS/style-login.css
+=======
+  h2.heading{
+    font-size: 32px;
+    font-family: Exo;
+  }
+
+  .error {
+    color: #ff4d4d;
+    font-size: 0.8em;
+    padding-left: 10px;
+  }
+  
+  .success-message {
+    display: none;
+    color: #80ed99;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+
+  
+  .input-slide {
+    display: none;
+}
+
+.input-slide.active {
+    display: block;
+}
+>>>>>>> Stashed changes:CSS/style-login.css

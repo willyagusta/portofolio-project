@@ -16,7 +16,9 @@
 
 .grid .card img {
     width: 100%;
+    height: auto;
     align-items: center;
+    object-fit: cover;
 }
 
 .grid .card-info {
