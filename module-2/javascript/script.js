@@ -13,7 +13,7 @@ document
     localStorage.setItem("email", formData.get("email"));
 
     setTimeout(function () {
-      window.location.href = "movies.html";
+      window.location.href = "movie.html";
     }, 1000);
   });
 
