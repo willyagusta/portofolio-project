@@ -22,13 +22,10 @@ body {
   .container hr {
     width: 100%;
   }
-<<<<<<< Updated upstream:module-2/CSS/style-login.css
-=======
 
   .steps-container hr {
     border-top: 7px solid #fff
   }
->>>>>>> Stashed changes:CSS/style-login.css
   
 .heading {
     padding-bottom: 20px;
@@ -79,8 +76,8 @@ a:active{
 
 .form-button {
     display: flex;
-    flex-direction: row;
     margin: auto;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     padding-top: 25px;
@@ -92,13 +89,12 @@ a:active{
     justify-content: center;
 }
 
-.input-slide .username {
+.input-slide .username{
     display: flex;
     flex: row;
     justify-content: center;
     margin-bottom: 20px;
     margin-top: 40px;
-    
 }
 
 .input-slide input {
@@ -106,8 +102,9 @@ a:active{
     padding: 10px;
     background-color: #6c757d;
     outline: none;
-    border-radius: 10px;
-    border: none;
+    border-radius: 5px;
+    border-width: 5px;
+    border-color: black;
     margin: auto 10px;
     font-size: 1.01em;
     color: white;
@@ -121,8 +118,6 @@ a:active{
     width: 0%;
 }
 
-<<<<<<< Updated upstream:module-2/CSS/style-login.css
-=======
 .steps {
   display: inline-block;
   position: absolute;
@@ -151,7 +146,6 @@ a:active{
   justify-content: center;
 }
 
->>>>>>> Stashed changes:CSS/style-login.css
 .input-slide input::placeholder {
     color: white;
     font-size: 1.01em;
@@ -167,7 +161,7 @@ a:active{
     font-weight: 800;
     outline: none;
     border: none;
-    margin: auto;
+    margin: 5px;
     font-family: Exo;
     font-size: 1em;
     cursor: pointer;
@@ -176,14 +170,8 @@ a:active{
   .button-next:hover {
     background-color: #40916c;
   }
-
   .steps-container {
     display: flex;
-<<<<<<< Updated upstream:module-2/CSS/style-login.css
-=======
-    position: relative;
-    padding-bottom: 10px;
->>>>>>> Stashed changes:CSS/style-login.css
   }
 
   .item-icon {
@@ -194,8 +182,6 @@ a:active{
     width: 100%;
   }
 
-<<<<<<< Updated upstream:module-2/CSS/style-login.css
-=======
   h2.heading{
     font-size: 32px;
     font-family: Exo;
@@ -223,4 +209,10 @@ a:active{
 .input-slide.active {
     display: block;
 }
->>>>>>> Stashed changes:CSS/style-login.css
+
+.password, .confirm-password {
+  display: block;
+  padding: 10px;
+  margin: 10px auto;
+}
+

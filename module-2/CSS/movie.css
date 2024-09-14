@@ -1,9 +1,12 @@
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 2rem, 0;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     align-items: center;
     justify-content: center;
+    max-width: 1200px;
+    margin: 45px auto;
 }
 
 main .movie {
@@ -12,6 +15,9 @@ main .movie {
     position: relative;
     overflow: hidden;
     border-radius: 3px;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
 }
 
 main .movie img {
@@ -25,7 +31,7 @@ main .movie img {
 .movie .movie-info {
     display:flex;
     padding-left: 1rem;
-    padding-top: 0rem;
+    padding-top: auto;
     padding-right: 1rem;
     padding-bottom: 0.5rem;
     justify-content: space-between;
@@ -79,3 +85,30 @@ main .movie img {
     max-width: calc(100% - 2rem);
     
 }
+
+.search {
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: transparent;
+    inline-size: none;
+    outline: none;
+    border-radius: 20px;
+    color: white;
+    border: 2px solid black;
+    margin: auto 10px;
+    font-size: 1.01em;
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+    position: relative;
+  }
+
+  .search::placeholder {
+    color: #7378c5;
+  }
+
+  .search:focus {
+    outline: none;
+    border-color: #22254b;
+    background-color: #22254b;
+  }
+  
