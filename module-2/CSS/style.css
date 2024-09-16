@@ -99,12 +99,7 @@ main. containers {
     gap: 2rem;
 }
 
-.grid {
-    max-width: 1200px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .popular h2 {
     text-align: left;

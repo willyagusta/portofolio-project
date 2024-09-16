@@ -103,8 +103,7 @@ a:active{
     background-color: #6c757d;
     outline: none;
     border-radius: 5px;
-    border-width: 5px;
-    border-color: black;
+    border: none;
     margin: auto 10px;
     font-size: 1.01em;
     color: white;
@@ -172,6 +171,7 @@ a:active{
   }
   .steps-container {
     display: flex;
+    padding-bottom: 15px;
   }
 
   .item-icon {
