@@ -16,7 +16,10 @@
 
 .grid .card img {
     width: 100%;
+    height: auto;
     align-items: center;
+    object-fit: cover;
+    display: block;
 }
 
 .grid .card-info {
@@ -28,6 +31,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #373b69;
+    height: 100px;
 }
 
 .grid .card-info span {
@@ -49,6 +53,7 @@
     left: 0;
     top: 100%;
     width: 100%;
+    box-sizing: border-box;
     transition: transform 0.4s ease-in;
   }
 
@@ -59,4 +64,9 @@
 
 .card:hover .card-overview {
     transform: translateY(-100%);
+}
+
+.popular {;
+    max-width: 1200px;
+    margin: 0 auto;
 }

@@ -22,9 +22,14 @@ body {
   .container hr {
     width: 100%;
   }
+
+  .steps-container hr {
+    border-top: 7px solid #fff
+  }
   
 .heading {
-    padding: 20px;
+    padding-bottom: 20px;
+    padding-top: 0;
     font-weight: 900;
     text-align: center;
     font-size: 2em;
@@ -65,21 +70,14 @@ a:active{
     color:none;
 }
 
-.heading {
-    padding: 20px;
-    font-weight: 900;
-    text-align: center;
-    font-size: 2em;
-  }
-
 .back{
     margin-bottom: 15px;
 }
 
 .form-button {
     display: flex;
-    flex-direction: row;
     margin: auto;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     padding-top: 25px;
@@ -91,11 +89,12 @@ a:active{
     justify-content: center;
 }
 
-.username {
+.input-slide .username{
     display: flex;
     flex: row;
     justify-content: center;
-    
+    margin-bottom: 20px;
+    margin-top: 40px;
 }
 
 .input-slide input {
@@ -103,7 +102,7 @@ a:active{
     padding: 10px;
     background-color: #6c757d;
     outline: none;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     margin: auto 10px;
     font-size: 1.01em;
@@ -116,6 +115,34 @@ a:active{
 .steps-container > .active {
     background: #80ed99;
     width: 0%;
+}
+
+.steps {
+  display: inline-block;
+  position: absolute;
+  top: -25px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.item-icon > .steps {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  color: #212529;
+  font-size: 1.4em;
+  display: flex;
+  border: 5px solid #373b69;
+  margin: auto;
+  position: relative;
+  box-sizing: content-box;
+  z-index: 1;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
 }
 
 .input-slide input::placeholder {
@@ -133,7 +160,7 @@ a:active{
     font-weight: 800;
     outline: none;
     border: none;
-    margin: auto;
+    margin: 5px;
     font-family: Exo;
     font-size: 1em;
     cursor: pointer;
@@ -142,9 +169,9 @@ a:active{
   .button-next:hover {
     background-color: #40916c;
   }
-
   .steps-container {
     display: flex;
+    padding-bottom: 15px;
   }
 
   .item-icon {
@@ -154,4 +181,38 @@ a:active{
     justify-content: space-evenly;
     width: 100%;
   }
+
+  h2.heading{
+    font-size: 32px;
+    font-family: Exo;
+  }
+
+  .error {
+    color: #ff4d4d;
+    font-size: 0.8em;
+    padding-left: 10px;
+  }
+  
+  .success-message {
+    display: none;
+    color: #80ed99;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+
+  
+  .input-slide {
+    display: none;
+}
+
+.input-slide.active {
+    display: block;
+}
+
+.password, .confirm-password {
+  display: block;
+  padding: 10px;
+  margin: 10px auto;
+}
 
