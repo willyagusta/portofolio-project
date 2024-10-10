@@ -1,0 +1,73 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.grid .card {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.grid .card img {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    object-fit: cover;
+    display: block;
+}
+
+.grid .card-info {
+    display:flex;
+    padding-left: 1rem;
+    padding-top: 0rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #373b69;
+    height: 100px;
+}
+
+.grid .card-info span {
+    background-color: #22254b;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.grid .card-info span.green {
+    color: lightgreen;
+}
+
+.grid .card-overview {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    text-align: left;
+    padding: 2rem;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.4s ease-in;
+  }
+
+.grid .card-overview h3 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.card:hover .card-overview {
+    transform: translateY(-100%);
+}
+
+.popular {
+    max-width: 1200px;
+    margin: 0 auto;
+}
