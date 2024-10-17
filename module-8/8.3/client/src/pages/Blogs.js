@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './Blogs.css';
 
 // If a text string content is over 50 characters, shorten it and add a '...'.
 const shortenContent = (content) => {
