@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npx tailwindcss -i ./src/entrypoint.css -o ./public/css/tailwind.css --watch",
+    "build": "npx tailwindcss -i ./src/style.css -o ./public/css/tailwind.css --watch",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "concurrently \"npm run start:backend\" \"npm start\""
