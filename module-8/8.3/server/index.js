@@ -7,7 +7,7 @@ import morgan from 'morgan';
 const app = express();
 import { PORT } from './config.js';
 import blogsRouter from './routes/blogsRouter.js';
-import usersRouter from './routes/userRouter.js';
+import usersRouter from './routes/usersRouter.js';
 import db from './db/dbconn.js';
 
 app.use (cors());

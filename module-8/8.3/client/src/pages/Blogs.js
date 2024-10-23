@@ -51,7 +51,7 @@ function Blogs() {
   useEffect(() => {
     console.log('=== debug: fetching blogs data...');
     async function getBlogs() {
-      const result = await axios.get('/api/blogs');
+      const result = await axios.get(`${process.env.REACT_APP_API_URL}/blogs`);
       setIsLoading(false);
       if (result && result.status === 200) {
         console.log('=== debug: data returned: ', result.data);
