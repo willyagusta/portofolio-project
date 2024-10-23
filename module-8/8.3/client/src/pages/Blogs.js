@@ -4,20 +4,20 @@ import axios from 'axios';
 
 // If a text string content is over 50 characters, shorten it and add a '...'.
 const shortenContent = (content) => {
-  if (content.length > 50) {
-    return content.substring(0, 50) + '...';
+  if (content.length > 100) {
+    return content.substring(0, 100) + '...';
   }
   return content;
 };
 
 // A single item in the blogs list
 function BlogItem({ blog }) {
-  const blogId = blog._id;
+  const blogId = blog.id;
   const preview = shortenContent(blog.content); // Short preview of the blog content
   return (
     <li key={`blog-${blogId}`} className="blog-item">
       <Link to={`/blogs/${blogId}`}>
-        <span>{blog.title}</span>
+        <div className="font-semibold text-2xl">{blog.title}</div>
       </Link>
       <span>{preview}</span>
     </li>
@@ -27,17 +27,16 @@ function BlogItem({ blog }) {
 // List of all the blogs
 function BlogsList({ data, isLoading }) {
   if (isLoading) {
-    return <p>loading</p>;
+    return <p>Loading...</p>;
   }
   if (!data?.length) {
-    return <p> No blogs data </p>;
+    return <p>No blogs data</p>;
   }
   return (
     <div id="all-blogs">
-      <h3>All blogs:</h3>
-      <ul className="blogs-list">
+      <ul className="blogs-list grid grid-cols-3 gap-4 pb-20 gap-y-20">
         {data.map((row) => (
-          <BlogItem blog={row} />
+          <BlogItem blog={row} key={row._id} />
         ))}
       </ul>
     </div>
@@ -51,13 +50,22 @@ function Blogs() {
   useEffect(() => {
     console.log('=== debug: fetching blogs data...');
     async function getBlogs() {
-      const result = await axios.get(`${process.env.REACT_APP_API_URL}/blogs`);
-      setIsLoading(false);
-      if (result && result.status === 200) {
-        console.log('=== debug: data returned: ', result.data);
-        setBlogs(result.data);
-      } else {
-        console.error('fetch data error: ' + result.status);
+      try {
+        const result = await axios.get(`${process.env.REACT_APP_API_URL}/blogs`, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        setIsLoading(false);
+        if (result && result.status === 200) {
+          console.log('=== debug: data returned: ', result.data);
+          setBlogs(result.data);
+        } else {
+          console.error('Fetch data error: ' + result.status);
+        }
+      } catch (error) {
+        setIsLoading(false);
+        console.error('Fetch data error: ', error);
       }
     }
     getBlogs();
@@ -65,11 +73,13 @@ function Blogs() {
 
   return (
     <div>
-      <h2>Blogs</h2>
-      <p>This is the Blogs page</p>
+      <h2 className="text-white text-7xl font-semibold leading-tight pb-8">Tech Insights Hub</h2>
+      <p className="text-white pb-8">Explore our tech blog collection to stay updated with the latest innovations, expert opinions, and practical advice.</p>
       <BlogsList data={blogs} isLoading={isLoading} />
     </div>
   );
 }
 
 export default Blogs;
+
+console.log('API URL:', process.env.REACT_APP_API_URL);

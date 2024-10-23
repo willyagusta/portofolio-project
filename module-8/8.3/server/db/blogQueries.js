@@ -11,7 +11,7 @@ export const getBlogById = async (id) => {
 };
 
 export const createBlog = async (title, content, user_id) => {
-    const result = await db.query ('INSERT INTO blogs (id, title, content, created_at, updated_ate') 
+    const result = await db.query ('INSERT INTO blogs (id, title, content, created_at, updated_at') 
     VALUES ('$1, $2, $3, NOW(), NOW() RETURNING *',
     [title, content, user_id]);
     return result.rows[0];
