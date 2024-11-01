@@ -4,7 +4,6 @@ module.exports = {
       '^.+\\.(js|mjs)$': 'babel-jest',
     },
     testMatch: [
-      '**/__test__/dbConnection.test.js',
-      '**/__test__/blog.test.js'
+      '**/__test__/auth.test.js'
     ],
   };
