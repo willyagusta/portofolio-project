@@ -14,7 +14,7 @@ describe('Login Process', () => {
         // Click on the login button
         console.log('--- Clicking login button ---');
         const loginButton = await global.driver.findElement(
-            By.xpath('//*[@id="navigation]/a[7]')
+            By.xpath('//*[@id="navigation"]/a[7]')
         );
         await loginButton.click();
 
