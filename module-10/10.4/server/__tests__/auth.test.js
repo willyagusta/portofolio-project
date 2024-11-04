@@ -1,7 +1,7 @@
 import request from 'supertest';
 import app from '../index.js';
-import { connectToDatabase, disconnectFromDatabase } from '../db/dbconn.js';
-import seedUser from '../scripts/seedDb.js';
+import { connectToDatabase, disconnectFromDatabase, dbQuery } from '../db/dbconn.js';
+import seedDatabase from '../scripts/seedDb.js';
 import { deleteUser } from '../db/userQueries.js';
 import { db } from '../db/dbconn.js';
 
@@ -12,7 +12,7 @@ beforeAll(async () => {
   await connectToDatabase();
   console.log('[TEST SUITE] Connected to the test database');
 
-  await seedUser; // Seed the user before running tests
+  await seedDatabase(); // Seed the user before running tests
 });
 
 afterAll(async () => {
@@ -46,7 +46,7 @@ describe('Auth API', () => {
     });
   
     it('should check if the user exists in the database', async () => {
-        const user = await db.query('SELECT * FROM users WHERE email = $1', ['thompson@email.com']);
+        const user = await dbQuery('SELECT * FROM users WHERE email = $1', ['thompson@email.com']);
         expect(user.rows.length).toBe(1); // Ensure that the user is seeded
     });
 

@@ -52,9 +52,9 @@ async function seedDatabase() {
     } catch (error) {
         await db.query('ROLLBACK');
         console.error('Error seeding database:', error);
-    } finally {
-        db.end();
     }
 }
 
 seedDatabase();
+
+export default seedDatabase;

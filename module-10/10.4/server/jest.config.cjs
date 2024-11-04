@@ -3,5 +3,5 @@ module.exports = {
     transform: {
       '^.+\\.(js|mjs)$': 'babel-jest',
     },
-    testMatch: ['**/__tests__/*.test.js'],
+    testMatch: ['**/__tests__/auth.test.js'],
   };

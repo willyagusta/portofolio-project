@@ -34,9 +34,9 @@ export const disconnectFromDatabase = async () => {
   };
 
 // Export the query function for executing SQL queries
-const query = (text, params) => db.query(text, params);
+const dbQuery = (text, params) => db.query(text, params);
 
 // Export the connect function for testing
 export default db;
-export { connectToDatabase, query };
+export { connectToDatabase, dbQuery };
 
