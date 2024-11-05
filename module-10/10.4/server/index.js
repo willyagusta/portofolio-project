@@ -5,6 +5,8 @@ import morgan from 'morgan';
 
 
 const app = express();
+app.use(express.json());
+
 import { PORT } from './config.js';
 import blogsRouter from './routes/blogsRouter.js';
 import usersRouter from './routes/usersRouter.js';

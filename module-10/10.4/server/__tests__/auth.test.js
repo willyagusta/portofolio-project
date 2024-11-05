@@ -43,6 +43,7 @@ describe('Auth API', () => {
       expect(response.body.data.user.email).toBe(loginCredentials.email);
       expect(response.body.data.token).toBeDefined();
       console.log('[TEST] Login with valid credentials test passed');
+      
     });
   
     it('should check if the user exists in the database', async () => {
