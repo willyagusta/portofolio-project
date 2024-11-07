@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
+import path from 'path';
 
 
 const app = express();
@@ -17,6 +18,15 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
 
 app.use (morgan('combined'));
+
+// Serve static files from the 'client/build' directory when in production
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(path.resolve(), 'client/build')));
+  
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(path.resolve(), 'client/build', 'index.html'));
+    });
+  }
 
 //blog Routes
 app.use ('/blogs', blogsRouter);
